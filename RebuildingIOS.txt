@@ -1,0 +1,24 @@
+# Steps for cleaning and then rebuilding the demo app for iOS. Can be sourced from shell command line.
+echo -n "Removing "
+rm -v platforms/ios/._Demo.xcodeproj
+cordova plugin remove cordova-plugin-approov-http
+cordova plugin remove cordova-plugin-advanced-http
+cordova platform remove ios
+echo -n "Removing "
+rm -v -rf platforms/ios/Demo/Plugins
+echo "Removing node_modules"
+rm -rf node_modules
+echo -n "Removing "
+rm -v -f package-lock.json
+echo -n "Removing "
+rm -v -f package.json
+echo "Removing platforms"
+rm -rf platforms
+echo "Removing plugins"
+rm -rf plugins
+# Customize path to point to your copy of cordova-plugin-advanced-http
+cordova plugin add ../cordova-plugin-advanced-http
+# Customize path to point to your copy of cordova-plugin-approov-http
+cordova plugin add ../cordova-plugin-approov-http
+cordova platform add ios
+cordova build ios

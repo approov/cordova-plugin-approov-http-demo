@@ -1,0 +1,20 @@
+# Steps for cleaning and then rebuilding the demo app for Android. Can be sourced from shell command line.
+cordova plugin remove cordova-plugin-approov-http
+cordova plugin remove cordova-plugin-advanced-http
+cordova platform remove android
+echo "Removing node_modules"
+rm -rf node_modules
+echo "Removing package-lock.json"
+rm -f package-lock.json
+echo "Removing package.json"
+rm -f package.json
+echo "Removing platforms"
+rm -rf platforms
+echo "Removing plugins"
+rm -rf plugins
+# Customize path to point to your copy of cordova-plugin-advanced-http
+cordova plugin add ../cordova-plugin-advanced-http
+# Customize path to point to your copy of cordova-plugin-approov-http
+cordova plugin add ../cordova-plugin-approov-http
+cordova platform add android
+cordova build android

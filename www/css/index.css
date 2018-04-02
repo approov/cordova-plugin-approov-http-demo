@@ -1,0 +1,52 @@
+/*****************************************************************************
+ * Project:     Demo Client App
+ * File:        index.css
+ * Original:    Created on 15 March 2017 by johnl
+ * Copyright(c) 2002 - 2017 by CriticalBlue Ltd.
+ *****************************************************************************/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: table;
+}
+
+.app {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width:  100%;
+    padding: 10%;
+    position: relative;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+}
+
+#image {
+	display:block;
+	margin: 0 auto;
+}
+
+#image[src=''] {
+    display: none;
+}
+
+#button {
+    position: absolute;
+    bottom: 10%;
+}
